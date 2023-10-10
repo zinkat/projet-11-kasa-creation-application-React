@@ -1,0 +1,28 @@
+.headerSection {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 55%;
+margin: 40px auto 40px auto;
+width: 100%;
+height: 68px;
+}
+
+.navigationBar {
+display: flex;
+align-items: flex-start;
+gap: 57px;
+}
+
+.navLink {
+color: #FF6060;
+text-align: right;
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height:  142.6%;
+text-decoration: none;
+}
+
+
