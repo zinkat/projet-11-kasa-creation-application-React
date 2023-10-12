@@ -1,4 +1,9 @@
-bannerAbout{
+.mainAbout{
   width: 86%;
+  margin: auto;
+}
+
+.drop{
+  width: 85%;
   margin: auto;
 }

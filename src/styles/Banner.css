@@ -1,7 +1,7 @@
 .bannerContainer {
   border-radius: 25px;
   height: 225px;
-  width: 1240px;
+  width: 100%;
   margin-bottom: 35px;
   position: relative;
   display: flex;
@@ -11,12 +11,12 @@
   border-radius: 25px;
   height: 100%;
   object-fit: cover;
-  width: 1240px;
+  width: 100%;
   opacity: 1;
 }
 .bannerText {
   color: #ffffff;
-  font-size: 42px;
+  font-size: 2.625em;
   left: 50%;
   position: absolute;
   top: 50%;
@@ -31,4 +31,16 @@
   position: absolute;
   top: 0;
 width: 100%;
+}
+@media screen and (max-width: 700px) {
+
+  .bannerText {
+    color: #ffffff;
+    font-size: 1.8em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 }

@@ -24,3 +24,22 @@
   margin-top: 100px;
   margin-bottom: 90px;
 }
+@media screen and (max-width: 700px) {
+
+  .titrePage{
+    margin-top: 60px;
+    font-size: 100px;
+  }
+  
+  .descriptionError{
+    color: #ff6060;
+    display: block;
+    font-size: 20px;
+    margin-top: 100px;
+  }
+  
+  .lienHome {
+    font-size: 16px;
+  }
+
+}
