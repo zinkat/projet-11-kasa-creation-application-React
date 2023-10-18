@@ -1,17 +1,157 @@
-.mainFiche{
-    width: 86%;
-    margin: auto;
+.mainFiche {
+  width: 86%;
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.description-equipements{
-    display: inline-flex;
-    gap: 0 75px;
-    line-height: 22.5px;
-    list-style: none;
-    margin-top: 25px;
-    width: 100%;
+.title {
+  width: 80%;
+}
+.title > h1 {
+  color: #ff6060;
+  font-size: 2.2em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 51.336px */
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+.title > p {
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 1.13em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%; /* 25.668px */
+  margin-top: 0px;
+}
+.infoPropietaire {
+  width: 20%;
+  display: flex;
+  height: 80%;
+  align-items: center;
+  gap: 20px;
+  margin-top: 22px;
+  justify-content: flex-end;
+}
+.photoPropietaire {
+  border-radius: 50%;
+  height: 64px;
+  object-fit: cover;
+  width: 64px;
 }
 
+.nomProprietaire {
+  color: #ff6060;
+  font-size: 1.12em;
+  text-align: right;
+  width: 40%;
+}
+
+.description-equipements {
+  display: inline-flex;
+  gap: 0 65px;
+  line-height: 22.5px;
+  list-style: none;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.TagContent {
+  width: 80%;
+}
+.starContent {
+  width: 20%;
+}
 .description-equipements > .dropdown {
-    width: 50%;
+  width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    width: 100%;
+  }
+  .title > h1 {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 1.225em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+  }
+
+  .title > p {
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    margin-top: 0px;
+  }
+
+  .tagsLogement {
+    width: 100%;
+  }
+
+  .mainFiche :nth-child(1) {
+    order: 1;
+  }
+  .mainFiche :nth-child(2) {
+    order: 2;
+  }
+  .mainFiche :nth-child(4) {
+    order: 3;
+  }
+  .mainFiche :nth-child(5) {
+    order: 3;
+  }
+  .mainFiche :nth-child(3) {
+    order: 4;
+  }
+
+  .mainFiche :nth-child(6) {
+    order: 6;
+  }
+
+  .starContent {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+  }
+  .infoPropietaire {
+    width: 60%;
+    gap: 8px;
+  }
+  .description-equipements {
+    flex-wrap: wrap;
+  }
+
+  .description-equipements > .dropdown {
+    width: 100%;
+  }
+
+  .nomProprietaire {
+    font-size: 0.8em;
+    margin-right: 10px;
+    text-align: right;
+    width: 20%;
+  }
+  .photoPropietaire {
+    border-radius: 50%;
+    height: 35px;
+    object-fit: cover;
+    width: 35px;
+  }
+
+  .TagContent {
+    width: 100%;
+  }
+  .header-dropdown {
+    margin-bottom: 20px;
+    height: 40px;
+  }
 }

@@ -1,9 +1,22 @@
-.mainAbout{
+.mainAbout {
   width: 86%;
+  margin: auto;
+  max-width: 1240px;
+}
+
+.drop {
+  width: 90%;
   margin: auto;
 }
 
-.drop{
-  width: 85%;
-  margin: auto;
+@media screen and (max-width: 700px) {
+  .drop {
+    width: 100%;
+    margin: 40px auto 64px auto;
+  }
+  /*  
+  .mainAbout{
+ 
+    height: 560px;
+  } */
 }

@@ -1,0 +1,21 @@
+.etoilesContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+img.etoile {
+  width: 30px;
+  margin: 0%;
+}
+
+@media screen and (max-width: 700px) {
+  .etoilesContainer {
+    display: inline-block;
+    justify-content: flex-start;
+  }
+
+  img.etoile {
+    width: 20px;
+    margin: 0%;
+  }
+}

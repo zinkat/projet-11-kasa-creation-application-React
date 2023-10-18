@@ -1,41 +1,64 @@
 import DataLogements from '../../data/datas/logements.json'
-import { useParams } from 'react-router-dom'
-import Dropdown from '../../components/Dropdown'
+import { useParams, Navigate } from 'react-router-dom'
 import '../../styles/FicheLogement.css'
+import Tag from '../../components/Tags'
+import Star from '../../components/Star'
+import Collapse from '../../components/Collapse'
+import Carrousel from '../../components/Carrousel'
 
 function FicheLogement() {
-  /* Récupère la bonne fiche */
+  /* Récupère la bonne fiche id url */
   const id = useParams()
   const ficheLogement = DataLogements.find((logement) => logement.id === id.id)
 
-  /* récup array equipement pour le dropdown*/
+  /* récup array equipement pour le Collapse*/
   const equipementsLogement = ficheLogement?.equipments.map(
     (equipment, index) => {
-      return <li key={index}>{equipment}</li>
+      return <span key={index}>{equipment}</span>
     },
   )
+  /* récup array Tag */
+  const tagsLogement = ficheLogement?.tags.map((tags, index) => {
+    return <Tag key={index} nom={tags} />
+  })
 
   return (
-    <div className="mainFiche">
-      <h1> {ficheLogement?.title}</h1>
-      <p>{ficheLogement?.location}</p>
-      <div className="information-propietaire">
-        <span className="nom-proprietaire">{ficheLogement?.host.name}</span>
-        <img
-          className="photo-propietaire"
-          src={ficheLogement?.host.picture}
-          alt="Propriétaire"
-        />
-      </div>
+    <>
+      {ficheLogement ? (
+        <div className="mainFiche">
+          <Carrousel pictures={ficheLogement?.pictures} />
 
-      <div className="description-equipements">
-        <Dropdown
-          titre="Description"
-          description={ficheLogement?.description}
-        />
-        <Dropdown titre="Équipements" description={equipementsLogement} />
-      </div>
-    </div>
+          <div className="title">
+            <h1> {ficheLogement?.title}</h1>
+            <p>{ficheLogement?.location}</p>
+          </div>
+          <div className="infoPropietaire">
+            <span className="nomProprietaire">{ficheLogement?.host.name}</span>
+            <img
+              className="photoPropietaire"
+              src={ficheLogement?.host.picture}
+              alt="Propriétaire"
+            />
+          </div>
+          <div className="TagContent">
+            <div className="tagsLogement">{tagsLogement}</div>
+          </div>
+          <div className="starContent">
+            <Star note={ficheLogement?.rating} />
+          </div>
+
+          <div className="description-equipements">
+            <Collapse
+              titre="Description"
+              description={ficheLogement?.description}
+            />
+            <Collapse titre="Équipements" description={equipementsLogement} />
+          </div>
+        </div>
+      ) : (
+        <Navigate replace to="/Error404" />
+      )}
+    </>
   )
 }
 
