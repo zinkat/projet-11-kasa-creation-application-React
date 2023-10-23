@@ -9,14 +9,10 @@
   margin: auto;
 }
 
-@media screen and (max-width: 700px) {
+@media screen  and (max-width: 768px) {
   .drop {
     width: 100%;
-    margin: 40px auto 64px auto;
   }
-  /*  
-  .mainAbout{
- 
-    height: 560px;
-  } */
+
+
 }

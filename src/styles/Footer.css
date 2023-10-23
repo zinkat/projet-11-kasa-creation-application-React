@@ -1,26 +1,29 @@
-.footerSection {
+footer {
   background: #000;
   color: #ffffff;
   width: 100%;
   margin-top: 50px;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 218px;
 }
 
-.footerContainer {
+.footerContent {
   display: flex;
-  padding: 60px 0px 35px 0px;
+  padding: 66px 0px 58px 0px;
   flex-direction: column;
   align-items: center;
-  gap: 29px;
-  position: relative;
 }
 
-@media screen and (max-width: 700px) {
-  .footerSection {
-    height: 210px;
-  }
+p {
+  display: flex;
+  height: 45px;
+  margin: 0;
+  align-items: center;
+}
 
-  .footerContainer {
+@media screen and (max-width: 768px) {
+  .footerContent {
     font-size: 14px;
   }
 }

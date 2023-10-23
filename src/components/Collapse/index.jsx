@@ -6,6 +6,7 @@ function Collapse({ titre, description }) {
   /* Création Hook d'état */
   const [isOpen, setIsOpen] = useState(false)
 
+  /* */ 
   const toggleCollapse = () => {
     setIsOpen(!isOpen)
   }

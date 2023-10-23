@@ -14,7 +14,7 @@ function FicheLogement() {
   /* récup array equipement pour le Collapse*/
   const equipementsLogement = ficheLogement?.equipments.map(
     (equipment, index) => {
-      return <span key={index}>{equipment}</span>
+      return <li key={index}>{equipment}</li>
     },
   )
   /* récup array Tag */
@@ -22,9 +22,12 @@ function FicheLogement() {
     return <Tag key={index} nom={tags} />
   })
 
+  if(!ficheLogement){
+
+    return <Navigate replace to="/Error404" />
+  }
   return (
-    <>
-      {ficheLogement ? (
+    
         <div className="mainFiche">
           <Carrousel pictures={ficheLogement?.pictures} />
 
@@ -44,7 +47,7 @@ function FicheLogement() {
             <div className="tagsLogement">{tagsLogement}</div>
           </div>
           <div className="starContent">
-            <Star note={ficheLogement?.rating} />
+            <Star rating={ficheLogement?.rating} />
           </div>
 
           <div className="description-equipements">
@@ -55,10 +58,7 @@ function FicheLogement() {
             <Collapse titre="Équipements" description={equipementsLogement} />
           </div>
         </div>
-      ) : (
-        <Navigate replace to="/Error404" />
-      )}
-    </>
+      
   )
 }
 

@@ -38,7 +38,7 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .headerSection {
     margin: 20px auto 27px auto;
     gap: 0%;

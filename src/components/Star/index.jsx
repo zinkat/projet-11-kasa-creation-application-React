@@ -2,7 +2,7 @@ import StarRouge from '../../assets/Star.png'
 import StarVide from '../../assets/StarVide.png'
 import '../../styles/Star.css'
 
-const Stars = ({ note }) => {
+const Stars = ({ rating }) => {
   const nombreEtoiles = 5
   const etoiles = []
 
@@ -10,12 +10,12 @@ const Stars = ({ note }) => {
     etoiles.push(
       <img
         className="etoile"
-        key={i}
-        src={i <= note ? StarRouge : StarVide}
-        alt={i <= note ? 'étoile rouge' : 'étoile grise'}
+        src={i <= rating ? StarRouge : StarVide}
+        alt={i <= rating ? 'étoile rouge' : 'étoile grise'}
       />,
     )
   }
+  /** retourne un conteneur qui contient le tableau d'étoiles créés dans la boucle. */
   return <div className="etoilesContainer">{etoiles}</div>
 }
 

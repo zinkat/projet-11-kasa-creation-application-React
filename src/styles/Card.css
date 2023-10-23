@@ -25,7 +25,7 @@
   position: absolute;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .containerCard {
     border-radius: 10px;
     height: 100%;

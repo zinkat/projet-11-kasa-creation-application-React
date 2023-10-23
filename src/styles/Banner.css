@@ -33,11 +33,10 @@
   top: 0;
   width: 100%;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .bannerContainer {
     border-radius: 10px;
-    height: 120px;
-    margin-bottom: 22px;
+    height: 130px;
   }
   .bannerText {
     color: #ffffff;
