@@ -12,6 +12,9 @@
 @media screen  and (max-width: 768px) {
   .drop {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
 

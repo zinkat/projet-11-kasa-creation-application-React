@@ -47,7 +47,7 @@
   color: #ff6060;
   font-size: 1.12em;
   text-align: right;
-  width: 37%;
+  width: 92px;
 }
 
 .description-equipements {
@@ -128,6 +128,7 @@
   }
   .description-equipements {
     flex-wrap: wrap;
+    gap: 10px;
   }
 
   .description-equipements > .collapse {
@@ -136,22 +137,23 @@
 
   .nomProprietaire {
     font-size: 0.8em;
-    margin-right: 10px;
     text-align: right;
-    width: 21%;
+    width: 73px;
   }
   .photoPropietaire {
     border-radius: 50%;
     height: 35px;
     object-fit: cover;
     width: 35px;
+   
   }
 
   .TagContent {
     width: 100%;
   }
   .header-collapse {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     height: 40px;
+  
   }
 }
