@@ -10,13 +10,22 @@ const Stars = ({ rating }) => {
     etoiles.push(
       <img
         className="etoile"
+        key={i}
         src={i <= rating ? StarRouge : StarVide}
-        alt={i <= rating ? 'étoile rouge' : 'étoile grise'}
+        alt="#"
       />,
     )
   }
+
   /** retourne un conteneur qui contient le tableau d'étoiles créés dans la boucle. */
-  return <div className="etoilesContainer">{etoiles}</div>
+  return (
+    <div
+      className="etoilesContainer"
+      aria-label={`note logement est de ${rating} sur 5`}
+    >
+      {etoiles}
+    </div>
+  )
 }
 
 export default Stars

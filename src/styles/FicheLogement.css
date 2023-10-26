@@ -65,7 +65,7 @@
 .starContent {
   width: 20%;
 }
-.description-equipements > .dropdown {
+.description-equipements > .collapse {
   width: 50%;
 }
 
@@ -130,7 +130,7 @@
     flex-wrap: wrap;
   }
 
-  .description-equipements > .dropdown {
+  .description-equipements > .collapse {
     width: 100%;
   }
 
@@ -150,7 +150,7 @@
   .TagContent {
     width: 100%;
   }
-  .header-dropdown {
+  .header-collapse {
     margin-bottom: 20px;
     height: 40px;
   }

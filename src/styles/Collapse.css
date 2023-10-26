@@ -1,10 +1,10 @@
-.dropdown {
+.collapse {
   border-radius: 5px;
   margin-bottom: 35px;
   text-align: left;
 }
 
-.header-dropdown {
+.header-collapse {
   align-items: center;
   background-color: #ff6060;
   border-radius: 5px;
@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-.titre-dropdown {
+.titre-collapse {
   color: #ffffff;
   line-height: 50px;
   padding: 5px 10px;
@@ -23,25 +23,24 @@
   width: 94%;
 }
 
-.fleche-dropdown {
+.fleche-collapse {
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
   transition: transform 0.3s ease;
   width: 30px;
-  position:relative;
+  position: relative;
 }
-.fleche-dropdown:hover {
+.fleche-collapse:hover {
   cursor: pointer;
 }
 
-.fleche-dropdown.open {
-  
+.fleche-collapse.open {
   transform: rotate(-180deg);
   transform-origin: center;
 }
 
-.description-dropdown {
+.description-collapse {
   background-color: #f6f6f6;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -53,30 +52,30 @@
   padding: 25px 15px 10px 15px;
 }
 
-@media screen  and (max-width: 768px) {
-  .titre-dropdown {
+@media screen and (max-width: 768px) {
+  .titre-collapse {
     font-size: 1.21em;
   }
 
-  .fleche-dropdown img {
+  .fleche-collapse img {
     width: 25px;
   }
-  .header-dropdown {
+  .header-collapse {
     border-radius: 5px;
     height: 25%;
     min-height: 52px;
   }
 
-  .titre-dropdown {
+  .titre-collapse {
     font-size: 15px;
   }
-  .dropdown {
+  .collapse {
     border-radius: 5px;
     margin-bottom: 0px;
     text-align: left;
   }
 
-  .description-dropdown {
+  .description-collapse {
     background-color: #f6f6f6;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
